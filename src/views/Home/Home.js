@@ -18,7 +18,10 @@ export default function Home() {
                 </Body>
             </Envelope>`;
 
-            axios.post("https://serviciosgs.mx/gsautos-ws/soap/autenticacionWS?wsdl", body, { headers: { 'Content-Type': 'text/xml; charset=utf-8' }, responseType: 'text' });
+            axios.post("https://serviciosgs.mx/gsautos-ws/soap/autenticacionWS?wsdl", body, { headers: { 'Content-Type': 'text/xml; charset=utf-8' }, responseType: 'text' })
+            .then((response) => {
+                console.log(response);
+            });
             // fetch("https://serviciosgs.mx/gsautos-ws/soap/autenticacionWS?wsdl", {
             //     method: 'POST',
             //     headers: {
